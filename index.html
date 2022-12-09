@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/lp.css">
+    <title>noob airlines</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">WELLCOME TO NOOB AIRLINES</a>
+            <ul class="nav-list">
+                <li><a href="#about">about</a></li>
+                <li><a href="flight_data.html">flights</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="adminlogin.html">admin</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <div class="container">
+        <div class="box">
+          <img src="img/loc.jpg">
+          <span>LOCAL</span>
+        </div>
+        <div class="box">
+        <img src="img/nat.jpg">
+          <span>NATIONAL</span>
+        </div>
+        <div class="box">
+            <img src="img/int.jpg">
+          <span>INTERNATIONAL</span>
+        </div>
+        <div class="box">
+            <img src="img/com.jpg">
+          <span>COMMERCIAL</span>
+        </div>
+      </div>
+      <br><br> <br><br>
+      <div class="about" id="about">
+            <h2>CONTACT US</h2><br>
+            <h2>noob airlines</h2><br>
+            <p>call: 1800-23-4325 <br> address: Hyderabad, telangana</p>
+      </div>
+      <br><br>
+      <style>
+        @charset "UTF-8";
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        :root {
+            --fontedestaque: 'Verdana', cursive;
+        }
+        body{
+            background-color: rgb(172, 172, 231);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        a:hover {
+            opacity: 0.7s;
+            background-color: rgb(255, 255, 255);
+            color: #000000;
+            transition-duration: 0.5s;
+        }
+
+        .logo {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            padding: 4% 2%;
+            box-sizing: border-box;
+            height: 75vh;
+          }
+          
+          .box {
+            flex: 1;
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 2%;
+            box-shadow: 0 20px 30px rgba(0,0,0,.1);
+            line-height: 0;
+          }
+          
+          .box > img {
+            width: 200%;
+            height: calc(100% - 10vh);
+            object-fit: cover; 
+            transition: .5s;
+          }
+          
+          .box > span {
+            font-size: 3.8vh;
+            display: block;
+            text-align: center;
+            height: 10vh;
+            line-height: 2.6;
+          }
+          
+          .box:hover { flex: 1 1 50%; }
+          .box:hover > img {
+            width: 100%;
+            height: 100%;
+          }
+          
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: var(--fontedestaque);
+            background-color: #1e0806;
+            height: 15vh;
+
+        }
+        .nav-list  {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            letter-spacing: 3px;
+            margin-left: 32px;
+        }
+
+        .contact, .about {
+            position: absolute;
+            width: 900px;
+            height: 150px;
+            z-index: 15;
+            left: 50%;
+            margin: -100px 0 0 -150px;
+            text-align:center;
+            color: #ffffff;
+            width:300px;
+            background-color:#241e1e;
+            border-radius: 30px;
+
+        }
+      </style>
+</body>
+</html>

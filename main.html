@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flight Booking </title>
+</head>
+<body>
+	<form action="data.php" method="post">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<form>
+							<form>
+								  <input type="radio" id="rt" name="type" value="Round trip">
+								  <label for="round trip">Round trip</label>
+								  <input type="radio" id="oneway" name="type" value="One way" >
+								  <label for="one way">One way</label><br>
+								</form> 
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group" >
+										<span class="form-label">FLYING FROM</span>
+										<select class="form-control" name="from" >
+											<option value="">--SELECT--</option>
+											<option value="Hyderabad">HYDERABAD</option>
+											<option value="Pune">PUNE</option>
+											<option value="Delhi">DELHI</option>
+											<option value="Chennai">CHENNAI</option>
+											<option value="Mumbai">MUMBAI</option>
+											<option value="Kolkata">KOLKATA</option>
+											<option value="Banglore">BANGLORE</option>
+											<option value="Kochi">KOCHI</option>
+											<option value="Assam">ASSAM</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group" >
+										<span class="form-label">TO</span>
+										<select class="form-control" name="to" >
+
+											<option value="">--SELECT--</option>
+											<option value="Hyderabad">HYDERABAD</option>
+											<option value="Pune">PUNE</option>
+											<option value="Delhi">DELHI</option>
+											<option value="Chennai">CHENNAI</option>
+											<option value="Mumbai">MUMBAI</option>
+											<option value="Kolkata">KOLKATA</option>
+											<option value="Banglore">BANGLORE</option>
+											<option value="Kochi">KOCHI</option>
+											<option value="Assam">ASSAM</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Departing</span>
+										<input class="form-control" type="date" name="departing-date"required>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Returning</span>
+										<input class="form-control" type="date" name="returning-date" required>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group" >
+										<span class="form-label">Adults (18+)</span>
+										<select class="form-control" name="adult" >
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Children (0-17)</span>
+										<select class="form-control" name="children">
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Travel class</span>
+										<select class="form-control" name="class" id="class" required>
+										<option value="Any class">Any</option>
+											<option value="first class">First class</option>
+											<option value="Economy class">Economy class</option>
+											<option value="Business class">Business class</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-btn">
+										<button class="submit-btn" action="tktdata.php">Show flights</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+<style>
+	html {
+  height: 100%;
+}
+	body{
+		min-height: 100%;
+		height:fit-content;
+		color: white;
+		background-image: url("img/index.jpg");
+ 		background-color: #cccccc;
+		background-size:cover;
+		min-height: 100vh;
+	}
+	h2{
+		height:0px;
+		color: white;
+		text-align: right;
+	}
+.bg{
+	background-color:red;
+}
+.type{
+	color:white;
+}
+.section {
+	position: relative;
+	height: 100vh;
+}
+.section .section-center {
+	position: fixed;
+	top: 50%;
+	left: 30%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.booking-form {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 15px;
+	border-radius: 25px;
+	width: 500px;
+	height: 575px;
+}
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 10px;
+}
+.booking-form .form-control {
+	background-color: #fff;
+	height: 30px;
+	color: #191a1e;
+	border: none;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 40px;
+	padding: 0px 25px;
+}
+.booking-form .form-control::-webkit-input-placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+.booking-form .form-control:-ms-input-placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+.booking-form .form-control::placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+.booking-form input[type="date"].form-control:invalid {
+	color: rgba(82, 82, 84, 0.4);
+}
+.booking-form select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 10px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+}
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.booking-form .form-label {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 24px;
+	height: 24px;
+	font-size: 12px;
+	color: #fff;
+}
+.booking-form .form-checkbox input {
+	position: absolute !important;
+	margin-left: -9999px !important;
+	visibility: hidden !important;
+}
+.booking-form .form-checkbox label {
+	position: relative;
+	padding-top: 4px;
+	padding-left: 30px;
+	font-weight: 400;
+	color: #fff;
+}
+.booking-form .form-checkbox label+label {
+	margin-left: 15px;
+}
+.booking-form .form-checkbox input+span {
+	position: absolute;
+	left: 2px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+}
+.booking-form .form-checkbox input+span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: #f23e3e;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+	opacity: 0;
+}
+.booking-form .form-checkbox input:checked+span:after {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+.booking-form .form-btn {
+	margin-top: 27px;
+}
+.booking-form .submit-btn {
+	left:350px;
+	color: #fff;
+	background-color: #3200e7;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	width: 200px;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+.booking-form .submit-btn:hover,.booking-form .submit-btn:focus {
+	opacity: 0.9;
+}
+</style>
+</body>
+</html>
